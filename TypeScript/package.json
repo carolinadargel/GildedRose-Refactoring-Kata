@@ -5,6 +5,7 @@
   "scripts": {
     "precompile": "rimraf app/**/*.js test/**/*.js",
     "compile": "tsc",
+    "build:ui": "rimraf ui-dist && tsc -p tsconfig.ui.json",
     "pretest": "rimraf app/**/*.js test/**/*.js",
     "test:jest": "jest",
     "test:jest:watch": "jest --watchAll",

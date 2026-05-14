@@ -30,6 +30,27 @@ Mocha
 npm run test:mocha
 ```
 
+## Run the visual interface
+
+Build the browser files:
+
+```sh
+npm run build:ui
+```
+
+Then serve the `TypeScript` folder locally and open `ui/index.html`.
+One simple option is:
+
+```sh
+python3 -m http.server 8000
+```
+
+After that, open:
+
+```text
+http://localhost:8000/ui/index.html
+```
+
 
 ## Run the TextTest fixture from the Command-Line
 
@@ -53,5 +74,4 @@ There are instructions in the [TextTest Readme](../texttests/README.md) for sett
 
     executable:${TEXTTEST_HOME}/python/texttest_fixture.py
     interpreter:python
-
 

@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "es2020",
+    "target": "es2017",
+    "outDir": "./ui-dist",
+    "rootDir": ".",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "lib": ["dom", "es2017"],
+    "types": []
+  },
+  "include": [
+    "app/**/*.ts",
+    "ui/**/*.ts"
+  ]
+}

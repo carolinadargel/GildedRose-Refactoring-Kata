@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gilded Rose Visualizer</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div class="hero-head">
+          <span class="eyebrow" data-copy="hero-eyebrow">Technical Kata Visualizer</span>
+          <button class="language-toggle" data-action="toggle-language" aria-label="Toggle language">
+            <span class="language-toggle-track">
+              <span class="language-toggle-option">ES</span>
+              <span class="language-toggle-option">EN</span>
+              <span class="language-toggle-thumb"></span>
+            </span>
+          </button>
+        </div>
+        <h1 data-copy="hero-title">Gilded Rose Inventory Simulator</h1>
+        <p data-summary>
+          Initial inventory state before applying any rules.
+        </p>
+
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-label" data-copy="metric-high-criticality">Items at high criticality</span>
+            <strong class="metric-value" data-metric="high-criticality">0</strong>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label" data-copy="metric-average-quality">Average quality</span>
+            <strong class="metric-value" data-metric="average-quality">0</strong>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label" data-copy="metric-expired-items">Expired items</span>
+            <strong class="metric-value" data-metric="expired-items">0</strong>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <button class="primary" data-action="next-day">Advance 1 day</button>
+          <button class="secondary" data-action="reset">Reset</button>
+          <span class="badge" data-day>Day 0</span>
+        </div>
+      </section>
+
+      <section class="grid" data-layout>
+        <article class="panel" data-panel="inventory">
+          <div class="section-head">
+            <h2 data-copy="inventory-title">Current Inventory</h2>
+            <div class="section-actions">
+              <label class="sort-control">
+                <span data-copy="sort-label">Sort by</span>
+                <select class="sort-select" data-sort>
+                  <option value="item-asc">Item: A to Z</option>
+                  <option value="item-desc">Item: Z to A</option>
+                  <option value="sellIn-lowest">Sell In: Lowest first</option>
+                  <option value="sellIn-highest">Sell In: Highest first</option>
+                  <option value="quality-lowest">Quality: Lowest first</option>
+                  <option value="quality-highest">Quality: Highest first</option>
+                  <option value="criticality-lowest">Criticality: Lowest first</option>
+                  <option value="criticality-highest">Criticality: Highest first</option>
+                </select>
+              </label>
+              <button class="panel-toggle-button" data-action="toggle-panel" data-panel-target="inventory" aria-label="Expand inventory panel">
+                <span class="panel-toggle-icon" aria-hidden="true">›</span>
+              </button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div class="inventory-feed">
+              <table>
+                <thead>
+                  <tr>
+                    <th data-copy="header-item">Item</th>
+                    <th data-copy="header-sell-in">Sell In</th>
+                    <th data-copy="header-quality">Quality</th>
+                    <th data-copy="header-criticality">Criticality</th>
+                    <th data-copy="header-rule">Rule</th>
+                  </tr>
+                </thead>
+                <tbody data-inventory></tbody>
+              </table>
+            </div>
+          </div>
+
+        </article>
+
+        <aside class="panel" data-panel="timeline">
+          <div class="section-head">
+            <h2 data-copy="timeline-title">Timeline</h2>
+            <div class="section-actions">
+              <button class="panel-toggle-button" data-action="toggle-panel" data-panel-target="timeline" aria-label="Expand timeline panel">
+                <span class="panel-toggle-icon" aria-hidden="true">›</span>
+              </button>
+            </div>
+          </div>
+          <div class="panel-body">
+            <ol class="timeline-feed" data-history></ol>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script type="module" src="../ui-dist/ui/main.js"></script>
+  </body>
+</html>
