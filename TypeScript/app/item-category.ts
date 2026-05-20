@@ -10,6 +10,8 @@ export type ItemCategory =
   | 'sulfuras'
   | 'conjured';
 
+// Determine the category of an item based on its name.
+// This is used to determine which rules apply to the item.
 export function getItemCategory(itemName: string): ItemCategory {
   if (itemName === AGED_BRIE) {
     return 'aged-brie';

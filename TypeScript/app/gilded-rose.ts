@@ -21,6 +21,8 @@ export class GildedRose {
     this.items = items;
   }
 
+  // Iterate through all items in the inventory and update their quality and sellIn
+  // according to the rules defined for each category of item
   updateQuality(): Array<Item> {
     for (const item of this.items) {
       this.updateItem(item);

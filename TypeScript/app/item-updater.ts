@@ -6,6 +6,11 @@ import {
   resetQuality,
 } from './quality-rules';
 
+// Logic for updating the quality and sellIn of items in the inventory according
+// to the rules defined for each category of item
+// The main function is updateItemByCategory, which takes an item and its category
+// and applies the appropriate rules to update the item's quality and sellIn.
+
 export function updateItemByCategory(item: Item, category: ItemCategory): boolean {
   if (category === 'aged-brie') {
     updateAgedBrie(item);
