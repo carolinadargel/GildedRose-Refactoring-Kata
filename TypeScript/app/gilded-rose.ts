@@ -1,6 +1,6 @@
-import { getItemCategory } from './item-category';
-import { updateItemByCategory } from './item-updater';
-import { decreaseSellIn } from './quality-rules';
+import { getItemCategory } from './item-category.js';
+import { updateItemByCategory } from './item-updater.js';
+import { decreaseSellIn } from './quality-rules.js';
 
 export class Item {
   name: string;

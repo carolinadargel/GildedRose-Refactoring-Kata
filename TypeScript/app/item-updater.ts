@@ -1,10 +1,10 @@
-import type { Item } from './gilded-rose';
-import type { ItemCategory } from './item-category';
+import type { Item } from './gilded-rose.js';
+import type { ItemCategory } from './item-category.js';
 import {
   decreaseQuality,
   increaseQuality,
   resetQuality,
-} from './quality-rules';
+} from './quality-rules.js';
 
 // Logic for updating the quality and sellIn of items in the inventory according
 // to the rules defined for each category of item

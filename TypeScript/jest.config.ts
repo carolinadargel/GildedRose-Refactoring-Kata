@@ -9,5 +9,8 @@ export default {
   transform: {
     '^.+\\.tsx?$': 'ts-jest',
   },
-  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' } ),
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1',
+    ...pathsToModuleNameMapper(compilerOptions.paths, { prefix: '<rootDir>/' }),
+  },
 };
